@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Menu</title>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Header-section*/
+.header-section{
+  background: #33d9b2;
+  padding: 15px 20px;
+}
+.header-section ul{
+  text-align: center;
+}
+.header-section ul li{
+  display: inline-block;
+  margin-left: -4px;
+}
+
+.header-section ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-right: 1px solid #fff;
+}
+.header-section ul li:first-child a{
+  border-left: 1px solid #fff;
+}
+.header-section ul li:hover > a{
+  color: yellow;
+  background: #218c74;
+}
+
+/* Dropdown menu 2*/
+.header-section ul li{
+  position: relative;
+}
+.header-section ul li ul{
+  position: absolute;
+  top: 160%;
+  left: 0;
+  width: 230px;
+  background: #33d9b2;
+  border-top: 1px solid #ddd;
+
+  transition: .4s;
+}
+.header-section ul li ul li{
+  display: block;
+  margin-left: 0;
+}
+.header-section ul li ul li a{
+  display: block;
+  border-bottom: 1px solid #ddd;
+
+}
+.header-section ul ul li:first-child a{
+  border-left: none;
+}
+/* hover part*/
+.header-section ul li ul{
+  visibility: hidden;
+  opacity: 0;
+
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+.header-section ul li:hover ul{
+  visibility: visible;
+  opacity: 1;
+
+  transform: scaleY(1);
+}
+  
+
+
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Works</a>
+        <ul>
+          <li><a href="#">Dropdown 1</a></li>
+          <li><a href="#">Dropdown 2</a></li>
+          <li><a href="#">Dropdown 3</a></li>
+          <li><a href="#">Dropdown 4</a></li>
+          <li><a href="#">Dropdown 5</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Testimonial</a></li>
+      <li><a href="#">Contact</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>
